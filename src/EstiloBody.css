@@ -65,6 +65,7 @@
     position: absolute;
     right: center;
     top: center;
+    border-radius: 1em;
 }
 
 .images{
@@ -86,13 +87,4 @@
 
 .css:hover{
     transform: scale(1.2);
-}
-
-.contact{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }

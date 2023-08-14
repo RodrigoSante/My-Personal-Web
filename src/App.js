@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import "./App.css";
 import "./EstiloNav.css";
 import "./EstiloBody.css";
+import "./EstiloContact.css";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import { langContext } from "./context/langContext";
 
@@ -97,10 +98,16 @@ function App() {
               src={require("./images/React-Js.png")} />
             </div>
           </about>
-          <contact>
-            <div className="contact">
-              Contacto
-            </div>
+          <contact className="contact">
+            <form class="form">
+              <div class="form-conteiner">
+                <h2 class="form-tittle">Contáctame</h2>
+                <input type="text" className="form-input" placeholder="Nombre:"></input>
+                <input type="email" className="form-input" placeholder="Email:"></input>
+                <textarea className="form-input-message" placeholder="Mensaje:"></textarea>
+                <input type="submit" value="Enviar" className="form-cta"></input>    
+              </div>
+            </form>
           </contact>
         </body>
       </div>

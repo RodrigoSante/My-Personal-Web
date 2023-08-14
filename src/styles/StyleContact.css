@@ -23,7 +23,7 @@
 
 .form-tittle{
     text-align: center;
-    color: #c27544;
+    color: #e9ffe6;
     font-size: 25px;
 }
 
@@ -43,6 +43,11 @@
     border-radius: 0.3em;
     width: 20%;
     justify-self: end;
-    color: #c27544;
+    color: #666666;
     cursor: pointer;
+}
+
+.form-cta:hover{
+    background-color: #c27544;
+    color: #e9ffe6;
 }

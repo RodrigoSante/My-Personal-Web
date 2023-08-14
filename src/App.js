@@ -1,10 +1,11 @@
 import React, {useContext} from "react";
 import "./App.css";
-import "./EstiloNav.css";
-import "./EstiloBody.css";
-import "./EstiloContact.css";
+import "./styles/StyleNav.css";
+import "./styles/StyleBody.css";
+import "./styles/StyleContact.css";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import { langContext } from "./context/langContext";
+import { ContactUs } from "./contactUs/ContactUs.js";
 
 function App() {
 
@@ -55,21 +56,21 @@ function App() {
           </div> 
         </header>
         <body className="body2">
-          <home className="home">
+          <div className="home">
             <div className="welcome">
               <h2 className="tittle">
                 <FormattedMessage 
                   id="app.welcome" 
                   defaultMessage="Welcome"/>
-                </h2>
+              </h2>
               <h2 className="iam">
                 <FormattedMessage 
                   id="app.iam" 
                   defaultMessage="I'm Rodrigo"/>
               </h2>
             </div>
-          </home>
-          <about className="about">
+          </div>
+          <div className="about">
             <div className="about-me">
               <FormattedMessage
               id="app.aboutmebody"
@@ -97,18 +98,10 @@ function App() {
               className="css"
               src={require("./images/React-Js.png")} />
             </div>
-          </about>
-          <contact className="contact">
-            <form class="form">
-              <div class="form-conteiner">
-                <h2 class="form-tittle">Contáctame</h2>
-                <input type="text" className="form-input" placeholder="Nombre:"></input>
-                <input type="email" className="form-input" placeholder="Email:"></input>
-                <textarea className="form-input-message" placeholder="Mensaje:"></textarea>
-                <input type="submit" value="Enviar" className="form-cta"></input>    
-              </div>
-            </form>
-          </contact>
+          </div>
+          <div className="contact">
+            <ContactUs />
+          </div>
         </body>
       </div>
   );

@@ -17,7 +17,7 @@
 
 .form-conteiner{
     display: grid;
-    gap: 1em;
+    gap: 0.5em;
     grid-auto-columns: 100%;
 }
 
@@ -25,6 +25,10 @@
     text-align: center;
     color: #e9ffe6;
     font-size: 25px;
+}
+
+.label-contact{
+    color: #e9ffe6;
 }
 
 .form-input{

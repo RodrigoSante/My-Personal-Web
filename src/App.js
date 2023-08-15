@@ -3,6 +3,7 @@ import "./App.css";
 import "./styles/StyleNav.css";
 import "./styles/StyleBody.css";
 import "./styles/StyleContact.css";
+import "./styles/StyleProjects.css";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import { langContext } from "./context/langContext";
 import { ContactUs } from "./contactUs/ContactUs.js";
@@ -32,22 +33,22 @@ function App() {
               defaultMessage="Theme"/>
             </div>
             <ul className="nav-links">
-              <li><a href="#">
+              <li><a href="#home">
                 <FormattedMessage 
                   id="app.home" 
                   defaultMessage="Home"/></a>
               </li>
-              <li><a href="#">
+              <li><a href="#about">
                 <FormattedMessage 
                   id="app.about" 
                   defaultMessage="About"/></a>
               </li>
-              <li><a href="#">
+              <li><a href="#projects">
                 <FormattedMessage 
                   id="app.projects" 
                   defaultMessage="Projects"/></a>
               </li>
-              <li><a href="#">
+              <li><a href="#contacts">
                 <FormattedMessage 
                   id="app.contacts" 
                   defaultMessage="Contacts"/></a>
@@ -56,7 +57,7 @@ function App() {
           </div> 
         </header>
         <body className="body2">
-          <div className="home">
+          <div className="home" id="home">
             <div className="welcome">
               <h2 className="tittle">
                 <FormattedMessage 
@@ -70,7 +71,7 @@ function App() {
               </h2>
             </div>
           </div>
-          <div className="about">
+          <div className="about" id="about">
             <div className="about-me">
               <FormattedMessage
               id="app.aboutmebody"
@@ -99,7 +100,10 @@ function App() {
               src={require("./images/React-Js.png")} />
             </div>
           </div>
-          <div className="contact">
+          <div className="projects" id="projects">
+
+          </div>
+          <div className="contact" id="contacts">
             <ContactUs />
           </div>
         </body>

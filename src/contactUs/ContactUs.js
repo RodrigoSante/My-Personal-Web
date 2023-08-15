@@ -18,7 +18,7 @@ export const ContactUs = () => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
-      });
+      }, e.target.reset());
   };
 
   return (

@@ -13,3 +13,7 @@
 .body {
     background-color: #e2e2ae;
 }
+
+html{
+    scroll-behavior: smooth;
+}

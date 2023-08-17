@@ -53,10 +53,6 @@
     color: #e9ffe6; 
 }
 
-.about-me:hover{
-    text-decoration: underline;
-}
-
 .description{
     background-color: #e98143;
     padding: 30px;

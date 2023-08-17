@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./App.css";
 import "./styles/StyleNav.css";
-import "./styles/StyleBody.css";
+import "./styles/StyleAbout.css";
 import "./styles/StyleContact.css";
 import "./styles/StyleProjects.css";
 import {IntlProvider, FormattedMessage} from "react-intl";
@@ -101,7 +101,14 @@ function App() {
             </div>
           </div>
           <div className="projects" id="projects">
-
+            <div className="projects-tittle">
+              <FormattedMessage
+                id="app.projects"
+                defaultMessage="Projects"/>
+            </div>
+            <div className="boxs">
+              <p>Projexts</p>
+            </div>
           </div>
           <div className="contact" id="contacts">
             <ContactUs />

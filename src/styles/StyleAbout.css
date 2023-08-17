@@ -1,7 +1,6 @@
 .body2{
     display: flex;
     flex-wrap: wrap;
-    background-color: #e2e2ae;
 }
 
 .home{
@@ -21,14 +20,14 @@
 .tittle{
     font-size: 150px;
     text-align: end;
-    color: #e9ffe6;
+    color: #d5ffb1;
     width: 60%;
     position: relative;
 }
 
 .iam{
     font-size: 150px;
-    color: #e9ffe6;
+    color: #d5ffb1;
     width: 100%;
     text-align: end; 
     position: relative;
@@ -50,14 +49,14 @@
     top: 20%;
     right: 85%;
     font-size: 30px;
-    color: #e9ffe6; 
+    color: #d5ffb1; 
 }
 
 .description{
-    background-color: #e98143;
+    background-color: #da9719;
     padding: 30px;
     width: 60%;
-    color: #e9ffe6;
+    color: #d5ffb1;
     position: absolute;
     right: center;
     top: center;

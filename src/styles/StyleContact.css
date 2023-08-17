@@ -9,7 +9,7 @@
 }
 
 .form{
-    background-color: #d6b56f;
+    background-color: #da9719;
     width: 50%;
     border-radius: 1em;
     padding: 30px;
@@ -23,12 +23,12 @@
 
 .form-tittle{
     text-align: center;
-    color: #e9ffe6;
+    color: #d5ffb1;
     font-size: 25px;
 }
 
 .label-contact{
-    color: #e9ffe6;
+    color: #d5ffb1;
 }
 
 .form-input{
@@ -52,6 +52,6 @@
 }
 
 .form-cta:hover{
-    background-color: #c27544;
-    color: #e9ffe6;
+    background-color: #c33e00;
+    color: #d5ffb1;
 }

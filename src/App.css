@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
 
-
 *{
     box-sizing: border-box;
     padding: 0;
@@ -10,10 +9,15 @@
     font-weight: 1000;
 }
 
-.body {
-    background-color: #e2e2ae;
-}
-
 html{
     scroll-behavior: smooth;
+    background-color: #e6e567;
+}
+
+#Light{
+    background-color: #e6e567;
+}
+
+#Dark{
+    background-color: #000000;
 }

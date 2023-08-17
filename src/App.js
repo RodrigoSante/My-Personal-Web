@@ -7,15 +7,27 @@ import "./styles/StyleProjects.css";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import { langContext } from "./context/langContext";
 import { ContactUs } from "./contactUs/ContactUs.js";
+import ReactSwitch from "react-switch";
+import { useState } from "react";
+import { useThemeContext } from  "./context/themeContext.js";
 
 function App() {
 
   const idioma = useContext(langContext);
 
+  const {contextTheme, setContextTheme} = useThemeContext()
+
+  const [checked, setChecked] = useState(false)
+  const handleSwitch = (nextChecked) => {
+    setContextTheme((state) => (state === "Light" ? "Dark":"Light"))
+    setChecked(nextChecked)
+    //console.log(nextChecked)
+  }
+
   return (
-      <div className="App">
+      <div className="App" id={contextTheme}>
         <header className="header">
-          <div className='nav'>
+          <div className="nav">
             <div className="languages">
               <FormattedMessage
                 id="app.language"
@@ -31,6 +43,20 @@ function App() {
               <FormattedMessage
               id="app.theme"
               defaultMessage="Theme"/>
+              <ReactSwitch 
+                onChange={handleSwitch}
+                checked={checked}
+                onColor="#86d3ff"
+                onHandleColor="#2693e6"
+                handleDiameter={20}
+                uncheckedIcon={false}
+                checkedIcon={false}
+                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                height={20}
+                width={48}
+                className="react-switch"
+                id="material-switch"/>
             </div>
             <ul className="nav-links">
               <li><a href="#home">

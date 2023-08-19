@@ -10,6 +10,8 @@ import { ContactUs } from "./contactUs/ContactUs.js";
 import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from  "./context/themeContext.js";
+import { BsMoonStars, BsSun } from "react-icons/bs";
+
 
 function App() {
 
@@ -21,7 +23,6 @@ function App() {
   const handleSwitch = (nextChecked) => {
     setContextTheme((state) => (state === "Light" ? "Dark":"Light"))
     setChecked(nextChecked)
-    //console.log(nextChecked)
   }
 
   return (
@@ -43,20 +44,27 @@ function App() {
               <FormattedMessage
               id="app.theme"
               defaultMessage="Theme"/>
-              <ReactSwitch 
-                onChange={handleSwitch}
-                checked={checked}
-                onColor="#86d3ff"
-                onHandleColor="#2693e6"
-                handleDiameter={20}
-                uncheckedIcon={false}
-                checkedIcon={false}
-                boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                height={20}
-                width={48}
-                className="react-switch"
-                id="material-switch"/>
+              <div className="switch">
+                <ReactSwitch 
+                  onChange={handleSwitch}
+                  checked={checked}
+                  onColor="#56848b"
+                  onHandleColor="#34525e"
+                  handleDiameter={20}
+                  uncheckedIcon={false}
+                  checkedIcon={false}
+                  boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                  activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                  height={20}
+                  width={48}
+                  className="react-switch"
+                  id="material-switch"
+                  />
+                  <BsMoonStars className="moon"/>
+                  <BsSun className="sun"/>
+                
+              </div>
+              
             </div>
             <ul className="nav-links">
               <li><a href="#home">

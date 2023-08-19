@@ -1,5 +1,15 @@
+//Light Mode
+
 .color1 {color: #b20024;}
 .color2 {color: #c33e00;}
 .color3 {color: #da9719;}
 .color4 {color: #e6e567;}
 .color5 {color: #d5ffb1;}
+
+//Dark Mode
+
+.color1 {color: #020c07;}
+.color2 {color: #0c1b18;}
+.color3 {color: #213432;}
+.color4 {color: #34525e;}
+.color5 {color: #56848b;}

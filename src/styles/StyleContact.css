@@ -15,6 +15,14 @@
     padding: 30px;
 }
 
+#Light .form{
+    background-color: #da9719;
+}
+
+#Dark .form{
+    background-color: #213432;
+}
+
 .form-conteiner{
     display: grid;
     gap: 0.5em;
@@ -54,4 +62,8 @@
 .form-cta:hover{
     background-color: #c33e00;
     color: #d5ffb1;
+}
+
+#Dark .form-cta:hover{
+    background-color: #56848b;
 }

@@ -63,6 +63,14 @@
     border-radius: 1em;
 }
 
+#Light .description{
+    background-color: #da9719;
+}
+
+#Dark .description{
+    background-color: #213432;
+}
+
 .images{
     width: 720px;
     height: 150px;

@@ -10,30 +10,6 @@
     justify-content: center;
 }
 
-.welcome{
-    min-width: 1000px;
-    height: 500px;
-    position: relative;
-    justify-content: center;
-}
-
-.tittle{
-    font-size: 150px;
-    text-align: end;
-    color: #d5ffb1;
-    width: 60%;
-    position: relative;
-}
-
-.iam{
-    font-size: 150px;
-    color: #d5ffb1;
-    width: 100%;
-    text-align: end; 
-    position: relative;
-    top:-120px;
-}
-
 .about{
     width: 100vw;
     height: 100vh;
@@ -69,25 +45,4 @@
 
 #Dark .description{
     background-color: #213432;
-}
-
-.images{
-    width: 720px;
-    height: 150px;
-    right: -100px;
-    position: absolute;
-    top: 80%;
-    right: 25%;
-    justify-content: center;
-    display: flex;
-}
-
-.css{
-    height: 90px;
-    width: 90px;
-    padding: 10px;
-}
-
-.css:hover{
-    transform: scale(1.2);
 }

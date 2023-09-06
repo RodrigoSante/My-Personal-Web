@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .form{
@@ -57,6 +58,13 @@
     justify-self: end;
     color: #666666;
     cursor: pointer;
+}
+
+.animation-email{
+    position: absolute;
+    width: 100px;
+    right: 450px;
+    top: 150px;
 }
 
 .form-cta:hover{

@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import "./App.css";
 import "./styles/StyleNav.css";
+import "./styles/StyleHome.css";
 import "./styles/StyleAbout.css";
 import "./styles/StyleContact.css";
 import "./styles/StyleProjects.css";
@@ -11,6 +12,10 @@ import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from  "./context/themeContext.js";
 import { BsMoonStars, BsSun } from "react-icons/bs";
+import Lottie from "lottie-react";
+import Planet from "./lottieFiles/Planet.json";
+import MakingProjects from "./lottieFiles/MakingProjects.json";
+import Email from "./lottieFiles/Email.json";
 
 
 function App() {
@@ -62,9 +67,7 @@ function App() {
                   />
                   <BsMoonStars className="moon"/>
                   <BsSun className="sun"/>
-                
               </div>
-              
             </div>
             <ul className="nav-links">
               <li><a href="#home">
@@ -93,16 +96,33 @@ function App() {
         <body className="body2">
           <div className="home" id="home">
             <div className="welcome">
-              <h2 className="tittle">
+              <h2 className="name-and-firtname">
                 <FormattedMessage 
-                  id="app.welcome" 
-                  defaultMessage="Welcome"/>
+                  id="app.name" 
+                  defaultMessage="Rodrigo Santellan"/>
               </h2>
               <h2 className="iam">
                 <FormattedMessage 
                   id="app.iam" 
-                  defaultMessage="I'm Rodrigo"/>
+                  defaultMessage="Web Developer"/>
               </h2>
+              <div className="images">
+                <img 
+                className="css"
+                src={require("./images/CSS3.png")} />
+                <img 
+                className="css"
+                src={require("./images/HTML5.png")} />
+                <img 
+                className="css"
+                src={require("./images/js.png")} />
+                <img 
+                className="css"
+                src={require("./images/React-Js.png")} />
+               </div>
+              <div className="planet">
+              <Lottie animationData={Planet} />
+              </div>
             </div>
           </div>
           <div className="about" id="about">
@@ -119,20 +139,6 @@ function App() {
               Thank you for visiting my page and getting to know a little more about me. I hope to have the chance to collaborate with you and share our passion for programming."/>
               </p>
             </div>
-            <div className="images">
-              <img 
-              className="css"
-              src={require("./images/CSS3.png")} />
-              <img 
-              className="css"
-              src={require("./images/HTML5.png")} />
-              <img 
-              className="css"
-              src={require("./images/js.png")} />
-              <img 
-              className="css"
-              src={require("./images/React-Js.png")} />
-            </div>
           </div>
           <div className="projects" id="projects">
             <div className="projects-tittle">
@@ -140,11 +146,19 @@ function App() {
                 id="app.projects"
                 defaultMessage="Projects"/>
             </div>
-            <div className="boxs">
-              <p>Projexts</p>
+            <div className="conteiner-desk">
+              <div className="desk" id="svg">
+                <Lottie animationData= {MakingProjects} />
+              </div>
+              <div>
+                <p>Here going to be my projects at the future</p>
+              </div>
             </div>
           </div>
           <div className="contact" id="contacts">
+            <div className="animation-email">
+              <Lottie animationData={Email} />
+            </div>
             <ContactUs />
           </div>
         </body>

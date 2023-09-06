@@ -8,17 +8,31 @@
 }
 
 .projects-tittle{
+    position: absolute;
+    top: 20%;
+    right: 85%;
     font-size: 30px;
-    color: #e9ffe6;
-    width: 100%;
-    height: 40px;
-    align-self: center;
-    padding: 0px 100px;
+    color: #d5ffb1; 
 }
 
-.boxs{
-    background-color: aqua;
-    width: 50%;
-    height: 35%;
-    align-items: center;
+.conteiner-desk{
+    background-color: #da9719;
+    position: relative;
+    display: flex;
+    padding: 30px;
+    width: 60%;
+    height: 50%;
+    color: #d5ffb1;
+    right: center;
+    top: 30%;
+    border-radius: 1em;
+}
+
+#Dark .conteiner-desk{
+    background-color: #213432;
+}
+
+
+.desk{
+    width: 70%;
 }

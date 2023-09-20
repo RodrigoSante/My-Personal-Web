@@ -12,11 +12,13 @@ import ReactSwitch from "react-switch";
 import { useState } from "react";
 import { useThemeContext } from  "./context/themeContext.js";
 import { BsMoonStars, BsSun } from "react-icons/bs";
+import { SiGithub, SiLinkedin } from "react-icons/si"
 import Lottie from "lottie-react";
 import Planet from "./lottieFiles/Planet.json";
 import MakingProjects from "./lottieFiles/MakingProjects.json";
 import Email from "./lottieFiles/Email.json";
-
+import { motion } from "framer-motion";
+//import "./observer.js";
 
 function App() {
 
@@ -94,7 +96,11 @@ function App() {
           </div> 
         </header>
         <body className="body2">
-          <div className="home" id="home">
+          <motion.div 
+            initial= {{opacity: 0}}
+            animate= {{opacity: 1}}
+            transition={{duration: 1.2}}
+          className="home" id="home">
             <div className="welcome">
               <h2 className="name-and-firtname">
                 <FormattedMessage 
@@ -107,25 +113,62 @@ function App() {
                   defaultMessage="Web Developer"/>
               </h2>
               <div className="images">
-                <img 
+                <motion.img
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                 className="css"
                 src={require("./images/CSS3.png")} />
-                <img 
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                 className="css"
                 src={require("./images/HTML5.png")} />
-                <img 
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                 className="css"
                 src={require("./images/js.png")} />
-                <img 
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                 className="css"
                 src={require("./images/React-Js.png")} />
-               </div>
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/NodeJs.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/PostgreSQL.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/Python.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/Git.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/GitHub.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/Illustreitor.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                className="css"
+                src={require("./images/After-Effects.png")} />
+              </div>
               <div className="planet">
-              <Lottie animationData={Planet} />
+                <Lottie animationData={Planet} />
               </div>
             </div>
-          </div>
-          <div className="about" id="about">
+          </motion.div>
+          <motion.div 
+            initial= {{opacity:0.5, scale:0.5}}
+            whileInView={{opacity:1, scale:1}}
+            transition={{duration:1.2}}
+            viewport={{once:true}}
+            className="about" id="about">
             <div className="about-me">
               <FormattedMessage
               id="app.aboutmebody"
@@ -139,28 +182,43 @@ function App() {
               Thank you for visiting my page and getting to know a little more about me. I hope to have the chance to collaborate with you and share our passion for programming."/>
               </p>
             </div>
-          </div>
-          <div className="projects" id="projects">
+          </motion.div>
+          <motion.div 
+            initial= {{opacity:0.5, scale:0.5}}
+            whileInView={{opacity:1, scale:1}}
+            transition={{duration:1.2}}
+            viewport={{once:true}}
+            className="projects" id="projects">
             <div className="projects-tittle">
               <FormattedMessage
                 id="app.projects"
                 defaultMessage="Projects"/>
             </div>
             <div className="conteiner-desk">
-              <div className="desk" id="svg">
+              <div>
+                <FormattedMessage
+                  id="app.next-projects"
+                  defaultMessage="I am currently working on some personal projects that I have in mind, so I decided to dedicate this area of the page to post them here in the future." />
+              </div>
+              <div className="desk">
                 <Lottie animationData= {MakingProjects} />
               </div>
-              <div>
-                <p>Here going to be my projects at the future</p>
-              </div>
             </div>
-          </div>
-          <div className="contact" id="contacts">
-            <div className="animation-email">
-              <Lottie animationData={Email} />
-            </div>
+          </motion.div>
+          <motion.div 
+            initial= {{opacity:0.5, scale:0.5}}
+            whileInView={{opacity:1, scale:1}}
+            transition={{duration:1.2}}
+            viewport={{once:true}}
+            className="contact" id="contacts">
             <ContactUs />
-          </div>
+            <div className="social-media">
+              <ul className="social-media-ul">
+                <li><a href="https://github.com/RodrigoSante" target="blanck"><SiGithub className="socialmediaicon"/></a></li>
+                <li><a href="https://www.linkedin.com/in/rodrigosantellanfrontenddeveloper/" target="blanck"><SiLinkedin className="socialmediaicon"/></a></li>
+              </ul>
+            </div>
+          </motion.div>
         </body>
       </div>
   );

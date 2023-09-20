@@ -20,7 +20,7 @@
 
 .name-and-firtname{
     font-size: 100px;
-    color: #d5ffb1;
+    color: #c33e00;;
     position: relative;
     text-align: justify;
     top: 150px;
@@ -28,7 +28,7 @@
 
 .iam{
     font-size: 70px;
-    color: #d5ffb1;
+    color: #c33e00;;
     text-align: justify; 
     position: relative;
     top: 50px;
@@ -53,11 +53,20 @@
 }
 
 .css{
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: auto;
     padding: 10px;
 }
 
 .css:hover{
     transform: scale(1.2);
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+#Dark .name-and-firtname{
+    color: #d5ffb1;
+}
+
+#Dark .iam{
+    color: #d5ffb1;;
 }

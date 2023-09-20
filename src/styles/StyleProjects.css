@@ -12,27 +12,35 @@
     top: 20%;
     right: 85%;
     font-size: 30px;
-    color: #d5ffb1; 
+    color: #c33e00; 
 }
 
 .conteiner-desk{
     background-color: #da9719;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     width: 60%;
     height: 50%;
-    color: #d5ffb1;
-    right: center;
+    color: #c33e00;
+    justify-content: center;
     top: 30%;
     border-radius: 1em;
+}
+
+.desk{
+    width: 50%;
 }
 
 #Dark .conteiner-desk{
     background-color: #213432;
 }
 
+#Dark .projects-tittle{
+    color: #d5ffb1; 
+}
 
-.desk{
-    width: 70%;
+#Dark .conteiner-desk{
+    color: #d5ffb1;
 }

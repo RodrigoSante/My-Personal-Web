@@ -32,12 +32,12 @@
 
 .form-tittle{
     text-align: center;
-    color: #d5ffb1;
+    color: #c33e00;
     font-size: 25px;
 }
 
 .label-contact{
-    color: #d5ffb1;
+    color: #c33e00;
 }
 
 .form-input{
@@ -62,9 +62,9 @@
 
 .animation-email{
     position: absolute;
-    width: 100px;
-    right: 450px;
-    top: 150px;
+    width: 200px;
+    right: 350px;
+    top: 400px;
 }
 
 .form-cta:hover{
@@ -72,6 +72,41 @@
     color: #d5ffb1;
 }
 
+.social-media{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 15px;
+    width: 60%;
+}
+
+.social-media-ul li{
+    display: inline-block;
+}
+
+.socialmediaicon{
+    width: 50px;
+    height: auto;
+    margin: 0px 20px;
+    color: #c33e00;
+    cursor: pointer;
+}
+
 #Dark .form-cta:hover{
     background-color: #56848b;
+    color: #d5ffb1;
+}
+
+#Dark .form-tittle{
+    text-align: center;
+    color: #d5ffb1;
+    font-size: 25px;
+}
+
+#Dark .label-contact{
+    color: #d5ffb1;
+}
+
+#Dark .socialmediaicon{
+    color: #d5ffb1;
 }

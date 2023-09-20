@@ -25,14 +25,14 @@
     top: 20%;
     right: 85%;
     font-size: 30px;
-    color: #d5ffb1; 
+    color: #c33e00; 
 }
 
 .description{
     background-color: #da9719;
     padding: 30px;
     width: 60%;
-    color: #d5ffb1;
+    color: #c33e00;
     position: absolute;
     right: center;
     top: center;
@@ -45,4 +45,12 @@
 
 #Dark .description{
     background-color: #213432;
+}
+
+#Dark .about-me{
+    color: #d5ffb1; 
+}
+
+#Dark .description{
+    color: #d5ffb1;
 }

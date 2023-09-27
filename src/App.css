@@ -21,3 +21,9 @@ html{
 #Dark{
     background-color: #0c1b18;
 }
+
+.body2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

@@ -1,23 +1,35 @@
-
 .contact{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    position: relative;
+    justify-content: center;
+}
+
+.contact-conteiner{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 0px 0px 0px;
+    background-color: aqua;
+}
+
+.conteiner-contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    height: 85%;
+    background-color: aquamarine;
 }
 
 .form{
     background-color: #da9719;
-    width: 50%;
+    width: 80%;
     border-radius: 1em;
-    padding: 30px;
-}
-
-#Light .form{
-    background-color: #da9719;
+    margin-top: 3vw;
 }
 
 #Dark .form{
@@ -28,16 +40,26 @@
     display: grid;
     gap: 0.5em;
     grid-auto-columns: 100%;
+    padding: 2.5vw;
 }
 
 .form-tittle{
-    text-align: center;
     color: #c33e00;
-    font-size: 25px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#Dark .form-tittle{
+    color: #d5ffb1;
 }
 
 .label-contact{
     color: #c33e00;
+    font-size: 1.5vw;
+}
+
+#Dark .label-contact{
+    color: #d5ffb1;
 }
 
 .form-input{
@@ -47,7 +69,6 @@
 
 .form-input-message{
     resize: none;
-    height: 100px;
     border-radius: 0.2em;
     padding: 0.3em;
 }
@@ -60,36 +81,9 @@
     cursor: pointer;
 }
 
-.animation-email{
-    position: absolute;
-    width: 200px;
-    right: 350px;
-    top: 400px;
-}
-
 .form-cta:hover{
     background-color: #c33e00;
     color: #d5ffb1;
-}
-
-.social-media{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    bottom: 15px;
-    width: 60%;
-}
-
-.social-media-ul li{
-    display: inline-block;
-}
-
-.socialmediaicon{
-    width: 50px;
-    height: auto;
-    margin: 0px 20px;
-    color: #c33e00;
-    cursor: pointer;
 }
 
 #Dark .form-cta:hover{
@@ -97,14 +91,26 @@
     color: #d5ffb1;
 }
 
-#Dark .form-tittle{
-    text-align: center;
-    color: #d5ffb1;
-    font-size: 25px;
+.social-media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-self: self-end;
+    height: 15%;
+    background-color: #56848b;
 }
 
-#Dark .label-contact{
-    color: #d5ffb1;
+.social-media-ul li{
+    display: inline-block;
+}
+
+.socialmediaicon{
+    height: auto;
+    width: 50px;
+    margin: 0 10px;
+    color: #c33e00;
+    cursor: pointer;
 }
 
 #Dark .socialmediaicon{

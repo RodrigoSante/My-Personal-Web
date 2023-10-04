@@ -1,1 +1,244 @@
-/*Responsive Desing*/
+@media(max-width: 720px){
+    .nav-links{
+        display: none;
+    }
+
+    .home-container .planet{
+        display: none;
+    }
+}
+
+.nav{
+    background-color: #da9719;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: fixed;
+    z-index: 1000;
+}
+
+#Dark .nav{
+    background-color: #213432;
+}
+
+.nav .overlay{
+    position: absolute;
+    display: flex;
+    top: 100px;
+    right: 0px;
+    background-color: #da9719;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.6s;
+}
+
+#Dark .nav .overlay{
+    background-color: #213432;
+}
+
+.nav .overlay .close-line-menu{
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.nav .overlay .overlay-container{
+    text-align: center;
+    width: 100%;
+}
+
+.nav .overlay .overlay-container .nav-links-phone li{
+    padding: 30px;
+}
+
+.nav .menu{
+    display: flex;
+    align-items: center;
+}
+.nav .menu .open-line-menu{
+    width: 40px;
+    height: 40px;
+}
+
+.nav .languages p{
+    margin: 0px 20px 8px 20px;
+}
+
+.nav .languages .flags-conteiner{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav .languages .flags-conteiner img{
+    width: 40px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.theme{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav .theme p{
+    margin: 0px 20px 8px 20px;
+}
+
+.nav .theme .switch{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(min-width: 721px){
+    .nav .overlay{
+        display: none;
+    }
+
+    .nav .menu{
+        display: none;
+    }
+}
+
+.section{
+    padding: 0px 15px 0px 15px;
+}
+
+.section .home-container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.section .home-container .welcome{
+    text-align: center;
+}
+
+.section .home-container .welcome .name h1{
+    font-size: 4em;
+}
+
+.section .home-container .welcome .profession{
+    margin-bottom: 20px;
+}
+
+.section .home-container .welcome .profession h2{
+    font-size: 2em;
+}
+
+.section .home-container .welcome .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section .home-container .welcome .images img{
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+}
+
+.section .about{
+    height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .container-about .about-me p{
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.section .container-about .description{
+    background-color: #da9719;
+    border-radius: 1em;
+    padding: 20px;
+}
+
+#Dark .section .container-about .description{
+    background-color: #213432;
+}
+
+.section .projects{
+    height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .projects-tittle p{
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+.section .projects-container .container-desk{
+    background-color: #da9719;
+    border-radius: 1em;
+    padding: 20px;
+}
+
+#Dark .section .projects-container .container-desk{
+    background-color: #213432;
+}
+
+.section .contact{
+    height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section .contact .contact-container{
+    width: 100%;
+}
+
+.section .form-container{
+    background-color: #da9719;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#Dark .section .form-container{
+    background-color: #213432;
+}
+
+.section .form-container .form-tittle{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.section .form-container .form-input{
+    border-radius: 0.2em;
+}
+
+.section .form-container .form-input-message{
+    border-radius: 0.2em;
+    resize: none;
+    height: 250px;
+}
+
+.section .form-container .form-cta{
+    border-radius: 1em;
+    margin: 20px 20px 0px 20px;
+    color: rgb(112, 111, 111);
+}
+
+.section .contact .contact-container .social-media-ul{
+    display: flex;
+    justify-content: center;
+}
+
+.section .contact .contact-container .social-media .socialmediaicon{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}

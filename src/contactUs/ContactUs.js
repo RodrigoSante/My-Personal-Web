@@ -23,7 +23,7 @@ export const ContactUs = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className="form">
-      <div class="form-conteiner" id="svg">
+      <div class="form-container" id="svg">
         <h2 class="form-tittle">
           <FormattedMessage
               id="app.contactme"

@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import "./App.css";
+import "./styles/StyleMobile.css";
 import "./styles/StyleNav.css";
 import "./styles/StyleHome.css";
 import "./styles/StyleAbout.css";
@@ -36,75 +37,80 @@ function App() {
       <div className="App" id={contextTheme}>
         <header className="header">
           <div className="nav">
-            <a onClick={opnenNav} className="menu">
-              <button><AiOutlineMenu className="openLineMenu"/></button>
-            </a>
-            <div className="overlay" id="mobile-menu">
-              <a onClick={closeNav} className="close">
-                <button><AiOutlineClose className="closeLineMenu"/></button>
+            <div className="menu">
+              <a onClick={opnenNav}>
+                <AiOutlineMenu className="open-line-menu"/>
               </a>
-              <div className="overlay-content">
+            </div> 
+            <div className="overlay" id="mobile-menu">
+              <div className="overlay-container">
                 <ul className="nav-links-phone">
                   <li><a href="#home" onClick={closeNav}>
-                    <FormattedMessage 
+                    <p><FormattedMessage 
                       id="app.home" 
-                      defaultMessage="Home"/></a>
+                      defaultMessage="Home"/></p></a>
                   </li>
                   <li><a href="#about" onClick={closeNav}>
-                    <FormattedMessage 
+                    <p><FormattedMessage 
                       id="app.about" 
-                      defaultMessage="About"/></a>
+                      defaultMessage="About"/></p></a>
                   </li>
                   <li><a href="#projects" onClick={closeNav}>
-                    <FormattedMessage 
+                    <p><FormattedMessage 
                       id="app.projects" 
-                      defaultMessage="Projects"/></a>
+                      defaultMessage="Projects"/></p></a>
                   </li>
                   <li><a href="#contacts" onClick={closeNav}>
-                    <FormattedMessage 
+                    <p><FormattedMessage 
                       id="app.contacts" 
-                      defaultMessage="Contacts"/></a>
+                      defaultMessage="Contacts"/></p></a>
                   </li>
                 </ul>
               </div>
+              <div className="close">
+                <a onClick={closeNav}>
+                  <AiOutlineClose className="close-line-menu"/>
+                </a>
+              </div>
             </div>
-            <div className="menu-pc">
-              <div className="languages">
-                <FormattedMessage
-                  id="app.language"
-                  defaultMessage="Languages"/>
-                    <img onClick={() => idioma.setLanguage("es-ES")}
-                      className="spain-flag"
-                      src={require("./images/Spanish.png")}/>
-                    <img onClick={() => idioma.setLanguage("en-US")}
-                      className="english-flag"
-                      src={require("./images/English.png")}/>
+            <div className="languages">
+              <p><FormattedMessage
+                id="app.language"
+                defaultMessage="Languages"/></p>
+              <div className="flags-conteiner">
+                <div><img onClick={() => idioma.setLanguage("es-ES")}
+                  className="spain-flag"
+                  src={require("./images/Spanish.png")}/></div>
+                <div><img onClick={() => idioma.setLanguage("en-US")}
+                  className="english-flag"
+                  src={require("./images/English.png")}/></div>
               </div>
-              <div className="theme">
-                <FormattedMessage
-                id="app.theme"
-                defaultMessage="Theme"/>
-                <div className="switch">
-                  <ReactSwitch 
-                    onChange={handleSwitch}
-                    checked={checked}
-                    onColor="#56848b"
-                    onHandleColor="#34525e"
-                    handleDiameter={20}
-                    uncheckedIcon={false}
-                    checkedIcon={false}
-                    boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-                    activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-                    height={20}
-                    width={48}
-                    className="react-switch"
-                    id="material-switch"
-                    />
-                    <BsMoonStars className="moon"/>
-                    <BsSun className="sun"/>
-                </div>
+            </div>
+            <div className="theme">
+              <p><FormattedMessage
+              id="app.theme"
+              defaultMessage="Theme"/></p>
+              <div className="switch">
+                <BsSun className="sun"/>
+                <ReactSwitch 
+                  onChange={handleSwitch}
+                  checked={checked}
+                  onColor="#56848b"
+                  onHandleColor="#34525e"
+                  handleDiameter={20}
+                  uncheckedIcon={false}
+                  checkedIcon={false}
+                  boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+                  activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+                  height={20}
+                  width={48}
+                  className="react-switch"
+                  id="material-switch" />
+                <BsMoonStars className="moon"/>
               </div>
-              <ul className="nav-links">
+            </div>
+            <div className="nav-links">
+              <ul>
                 <li><a href="#home">
                   <FormattedMessage 
                     id="app.home" 
@@ -125,91 +131,89 @@ function App() {
                     id="app.contacts" 
                     defaultMessage="Contacts"/></a>
                 </li>
-              </ul>
-            </div>
+                </ul>
+            </div>  
           </div> 
         </header>
-        <body className="body2">
-          <div className="conteiner-home">
-            <motion.div 
-              initial= {{opacity: 0}}
-              animate= {{opacity: 1}}
-              transition={{duration: 1.2}}
-              className="home" id="home">
-              <div className="welcome">
-                <div className="name">
-                  <h1>
-                    <FormattedMessage 
-                      id="app.name" 
-                      defaultMessage="Rodrigo Santellan"/>
-                  </h1>
-                </div>
-                <div className="profession">
-                  <h2>
-                    <FormattedMessage 
-                      id="app.iam" 
-                      defaultMessage="Web Developer"/>
-                  </h2>
-                </div>
-                <div className="images">
-                  <motion.img
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+        <body className="section">
+          <motion.div 
+            initial= {{opacity: 0}}
+            animate= {{opacity: 1}}
+            transition={{duration: 1.2}}
+            className="home-container" id="home">
+            <div className="welcome">
+              <div className="name">
+                <h1>
+                  <FormattedMessage 
+                    id="app.name" 
+                    defaultMessage="Rodrigo Santellan"/>
+                </h1>
+              </div>
+              <div className="profession">
+                <h2>
+                  <FormattedMessage 
+                    id="app.iam" 
+                    defaultMessage="Web Developer"/>
+                </h2>
+              </div>
+              <div className="images">
+                <motion.img
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/CSS3.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/HTML5.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/js.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/React-Js.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/NodeJs.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/PostgreSQL.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/Python.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/Git.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/GitHub.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/Illustreitor.png")} />
-                  <motion.img 
-                    whileHover={{ scale: 1.2, rotate: 360 }}
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
                   src={require("./images/After-Effects.png")} />
-                </div>
               </div>
-              <div className="planet">
-                <Lottie animationData={Planet} />
-              </div>
-            </motion.div>
-          </div>
+            </div>
+            <div className="planet">
+              <Lottie animationData={Planet} />
+            </div>
+          </motion.div>
           <motion.div 
             initial= {{opacity:0.5, scale:0.5}}
             whileInView={{opacity:1, scale:1}}
             transition={{duration:1.2}}
             viewport={{once:true}}
             className="about" id="about">
-            <div className="conteiner-about">
+            <div className="container-about">
               <div className="about-me">
                 <p>
                   <FormattedMessage
@@ -233,7 +237,7 @@ function App() {
             transition={{duration:1.2}}
             viewport={{once:true}}
             className="projects" id="projects">
-            <div className="projects-conteiner">
+            <div className="projects-container">
               <div className="projects-tittle">
                 <p>
                   <FormattedMessage
@@ -241,7 +245,7 @@ function App() {
                     defaultMessage="Projects"/>
                 </p>
               </div>
-              <div className="conteiner-desk">         
+              <div className="container-desk">         
                   <p>
                     <FormattedMessage
                       id="app.next-projects"
@@ -259,10 +263,8 @@ function App() {
             transition={{duration:1.2}}
             viewport={{once:true}}
             className="contact" id="contacts">
-            <div className="contact-conteiner">
-              <div className="conteiner-contact-form">
-                <ContactUs />
-              </div>
+            <div className="contact-container">
+              <ContactUs />
               <div className="social-media">
                 <ul className="social-media-ul">
                   <li><a href="https://github.com/RodrigoSante" target="blanck"><SiGithub className="socialmediaicon"/></a></li>

@@ -2,11 +2,15 @@
 
 *{
     box-sizing: border-box;
-    padding: 0;
-    border: 0;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
     font-family: 'REM', 'sans-serif';
     font-size: 20px;
     font-weight: 1000;
+    color: #d5ffb1;
+    text-decoration: none;
+    list-style: none;
 }
 
 html{
@@ -19,11 +23,5 @@ html{
 }
 
 #Dark{
-    background-color: #0c1b18;
-}
-
-.body2{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    background-color: #020c07;
 }

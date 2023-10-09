@@ -2,11 +2,10 @@ import React, {useContext} from "react";
 import "./App.css";
 import "./styles/StyleMobile.css";
 import "./styles/StyleNav.css";
-import "./styles/StyleHome.css";
 import "./styles/StyleAbout.css";
 import "./styles/StyleContact.css";
 import "./styles/StyleProjects.css";
-import { opnenNav, closeNav } from "./Nav";
+import { openNav, closeNav } from "./Nav";
 import {IntlProvider, FormattedMessage} from "react-intl";
 import { langContext } from "./context/langContext";
 import { ContactUs } from "./contactUs/ContactUs.js";
@@ -36,12 +35,7 @@ function App() {
   return (
       <div className="App" id={contextTheme}>
         <header className="header">
-          <div className="nav">
-            <div className="menu">
-              <a onClick={opnenNav}>
-                <AiOutlineMenu className="open-line-menu"/>
-              </a>
-            </div> 
+          <div className="nav"> 
             <div className="overlay" id="mobile-menu">
               <div className="overlay-container">
                 <ul className="nav-links-phone">
@@ -132,7 +126,12 @@ function App() {
                     defaultMessage="Contacts"/></a>
                 </li>
                 </ul>
-            </div>  
+            </div>
+            <div className="menu">
+              <a onClick={openNav}>
+                <AiOutlineMenu className="open-line-menu"/>
+              </a>
+            </div>
           </div> 
         </header>
         <body className="section">
@@ -191,8 +190,12 @@ function App() {
                   src={require("./images/Git.png")} />
                 <motion.img 
                   whileHover={{ scale: 1.2, rotate: 360 }}
-                  className="css"
+                  className="css" id="GitHubBlack"
                   src={require("./images/GitHub.png")} />
+                <motion.img 
+                  whileHover={{ scale: 1.2, rotate: 360 }}
+                  className="css" id="GitHubWhite"
+                  src={require("./images/GitHubDark.png")} />
                 <motion.img 
                   whileHover={{ scale: 1.2, rotate: 360 }}
                   className="css"
@@ -251,7 +254,7 @@ function App() {
                       id="app.next-projects"
                       defaultMessage="I am currently working on some personal projects that I have in mind, so I decided to dedicate this area of the page to post them here in the future." />
                   </p>
-                <div>
+                <div className="desk-animation">
                   <Lottie animationData= {MakingProjects} className="desk"/>
                 </div>
               </div>
@@ -267,7 +270,7 @@ function App() {
               <ContactUs />
               <div className="social-media">
                 <ul className="social-media-ul">
-                  <li><a href="https://github.com/RodrigoSante" target="blanck"><SiGithub className="socialmediaicon"/></a></li>
+                  <li><a href="https://github.com/RodrigoSante" target="blanck"><SiGithub className="socialmediaicon" /></a></li>
                   <li><a href="https://www.linkedin.com/in/rodrigosantellanfrontenddeveloper/" target="blanck"><SiLinkedin className="socialmediaicon"/></a></li>
                 </ul>
               </div>

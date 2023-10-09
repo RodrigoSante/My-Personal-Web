@@ -6,6 +6,10 @@
     .home-container .planet{
         display: none;
     }
+
+    .section .contact .contact-container{
+        width: 100%;
+    }
 }
 
 .nav{
@@ -29,8 +33,9 @@
     top: 100px;
     right: 0px;
     background-color: #da9719;
-    width: 100%;
+    width: 0%;
     height: 100vh;
+    overflow-y: auto;
     transition: all 0.6s;
 }
 
@@ -91,16 +96,6 @@
     justify-content: space-between;
 }
 
-@media(min-width: 721px){
-    .nav .overlay{
-        display: none;
-    }
-
-    .nav .menu{
-        display: none;
-    }
-}
-
 .section{
     padding: 0px 15px 0px 15px;
 }
@@ -119,6 +114,11 @@
 
 .section .home-container .welcome .name h1{
     font-size: 4em;
+    color: #da9719;
+}
+
+#Dark .section .home-container .welcome .name h1{
+    color: #d5ffb1;
 }
 
 .section .home-container .welcome .profession{
@@ -127,6 +127,11 @@
 
 .section .home-container .welcome .profession h2{
     font-size: 2em;
+    color: #da9719;
+}
+
+#Dark .section .home-container .welcome .profession h2{
+    color: #d5ffb1;
 }
 
 .section .home-container .welcome .images{
@@ -136,14 +141,22 @@
 }
 
 .section .home-container .welcome .images img{
-    width: 55px;
+    width: auto;
     height: 55px;
     margin: 10px;
 }
 
+#Light #GitHubWhite{
+    display: none;
+}
+
+#Dark #GitHubBlack{
+    display: none;
+}
+
 .section .about{
     height: 100vh;
-    padding-top: 120px;
+    padding: 120px 20px 0px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +165,11 @@
 .section .container-about .about-me p{
     font-size: 1.5em;
     margin-bottom: 25px;
+    color: #da9719;
+}
+
+#Dark .section .container-about .about-me p{
+    color: #d5ffb1;
 }
 
 .section .container-about .description{
@@ -166,7 +184,7 @@
 
 .section .projects{
     height: 100vh;
-    padding-top: 120px;
+    padding: 120px 20px 0px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,6 +193,11 @@
 .section .projects-tittle p{
     font-size: 1.5em;
     margin-bottom: 25px;
+    color: #da9719;
+}
+
+#Dark .section .projects-tittle p{
+    color: #d5ffb1;
 }
 
 .section .projects-container .container-desk{
@@ -189,14 +212,10 @@
 
 .section .contact{
     height: 100vh;
-    padding-top: 120px;
+    padding: 120px 20px 0px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.section .contact .contact-container{
-    width: 100%;
 }
 
 .section .form-container{
@@ -204,7 +223,7 @@
     border-radius: 1em;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
 }
 
 #Dark .section .form-container{
@@ -223,7 +242,7 @@
 .section .form-container .form-input-message{
     border-radius: 0.2em;
     resize: none;
-    height: 250px;
+    height: 200px;
 }
 
 .section .form-container .form-cta{
@@ -241,4 +260,9 @@
     width: 40px;
     height: 40px;
     margin: 10px;
+    fill: #da9719;
+}
+
+#Dark .section .contact .contact-container .social-media .socialmediaicon{
+    fill: #d5ffb1;
 }

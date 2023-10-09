@@ -1,118 +1,47 @@
-/*.contact{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+@media(min-width: 721px){
+    .contact .contact-container{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section .form-container{
+        padding: 20px 50px;
+        display: flex;
+    }
+    
+    .section .form-container .form-input{
+        border-radius: 0.2em;
+    }
+    
+    .section .form-container .form-input-message{
+        border-radius: 0.2em;
+        resize: none;
+        height: 250px;
+    }
+    
+    .section .form-container .form-cta{
+        width: 20%;
+        align-self: flex-end;
+        border-radius: 0.5em;
+        margin: 20px 20px 0px 20px;
+        color: rgb(112, 111, 111);
+    }
+
+    .section .form-container .form-cta:hover{
+        background-color: #b20024;
+        color: #d5ffb1;
+    }
+
+    #Dark .section .form-container .form-cta:hover{
+        background-color: #56848b;
+    }
+
 }
 
-.contact-conteiner{
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 80px 0px 0px 0px;
-    background-color: aqua;
+@media(min-width: 1080px){
+    .contact .contact-container{
+        width: 40%;
+    }
 }
-
-.conteiner-contact-form{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    height: 85%;
-    background-color: aquamarine;
-}
-
-.form{
-    background-color: #da9719;
-    width: 80%;
-    border-radius: 1em;
-    margin-top: 3vw;
-}
-
-#Dark .form{
-    background-color: #213432;
-}
-
-.form-conteiner{
-    display: grid;
-    gap: 0.5em;
-    grid-auto-columns: 100%;
-    padding: 2.5vw;
-}
-
-.form-tittle{
-    color: #c33e00;
-    text-align: center;
-    font-size: 1.5vw;
-}
-
-#Dark .form-tittle{
-    color: #d5ffb1;
-}
-
-.label-contact{
-    color: #c33e00;
-    font-size: 1.5vw;
-}
-
-#Dark .label-contact{
-    color: #d5ffb1;
-}
-
-.form-input{
-    border-radius: 0.2em;
-    padding: 0.3em;
-}
-
-.form-input-message{
-    resize: none;
-    border-radius: 0.2em;
-    padding: 0.3em;
-}
-
-.form-cta{
-    border-radius: 0.3em;
-    width: 20%;
-    justify-self: end;
-    color: #666666;
-    cursor: pointer;
-}
-
-.form-cta:hover{
-    background-color: #c33e00;
-    color: #d5ffb1;
-}
-
-#Dark .form-cta:hover{
-    background-color: #56848b;
-    color: #d5ffb1;
-}
-
-.social-media{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    align-self: self-end;
-    height: 15%;
-    background-color: #56848b;
-}
-
-.social-media-ul li{
-    display: inline-block;
-}
-
-.socialmediaicon{
-    height: auto;
-    width: 50px;
-    margin: 0 10px;
-    color: #c33e00;
-    cursor: pointer;
-}
-
-#Dark .socialmediaicon{
-    color: #d5ffb1;
-}*/

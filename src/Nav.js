@@ -1,9 +1,9 @@
-function opnenNav(){
-    document.getElementById("mobile-menu").style.width = "100%";
+function openNav(){
+    document.getElementById("mobile-menu").style.width = "80%";
 }
 
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0%";
 }
 
-export {opnenNav, closeNav};
+export {openNav, closeNav};
